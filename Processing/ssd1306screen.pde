@@ -14,7 +14,7 @@ void setup() {
   println(Serial.list());
   String portName = "COM3";
   // open the serial port
-  port = new Serial(this, portName, 2000000);
+  port = new Serial(this, portName, 1000000);
 }
 
 void draw() {
