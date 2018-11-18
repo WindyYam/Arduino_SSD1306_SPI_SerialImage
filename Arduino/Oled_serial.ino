@@ -16,7 +16,7 @@
 SSD1306 oled(OLED_DC, OLED_RESET, OLED_CS);
 byte* buf;
 void setup()   {
-  Serial.begin(500000);
+  Serial.begin(1000000);
   Serial.println(F("OLED Start"));
   SPI.begin();
 

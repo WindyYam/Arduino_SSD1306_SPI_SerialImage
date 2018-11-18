@@ -27,7 +27,7 @@ void setup() {
   // get a specific serial port (use EITHER this OR the first-available code above)
   String portName = "COM3";
   // open the serial port
-  port = new Serial(this, portName, 500000);
+  port = new Serial(this, portName, 1000000);
   
   /*for(int i=0;i<WIDTH;i++){
     for(int j=0;j<HEIGHT;j++){
