@@ -6,8 +6,8 @@ PImage[] allFrames;
 final int WIDTH = 128;
 final int HEIGHT = 64;
 byte[] bimg = new byte[WIDTH*HEIGHT/8];
-int threshold = 120;
-int interval = 60;
+int threshold = 170;   //二值化的阈值，需要手动调整
+int interval = 60;     //动画帧间隔时间，单位毫秒
 void setup() {
   //for jpg bmp etc
   /*img = loadImage("d:\\new.bmp");
