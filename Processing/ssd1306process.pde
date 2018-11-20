@@ -6,7 +6,7 @@ PImage[] allFrames;
 final int WIDTH = 128;
 final int HEIGHT = 64;
 byte[] bimg = new byte[WIDTH*HEIGHT/8];
-int threshold = 170;   //二值化的阈值，需要手动调整
+int threshold = 120;   //二值化的阈值，需要手动调整
 int interval = 60;     //动画帧间隔时间，单位毫秒
 void setup() {
   //for jpg bmp etc
@@ -53,7 +53,7 @@ void draw() {
       for(int j=0;j<HEIGHT;j++){
         color pix = img.pixels[i+j*WIDTH];
         float red = red(pix), green = green(pix), blue = blue(pix);
-        float intensity = sqrt(red*red + blue*blue +green*green);
+        float intensity = (red*0.3f + blue*0.11f +green*0.59f);
         if(intensity > threshold){
           bimg[i+j/8*WIDTH] = (byte)(bimg[i+j/8*WIDTH] | (1<<(j%8)));
         }else{

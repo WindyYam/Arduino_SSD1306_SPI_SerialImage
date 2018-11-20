@@ -7,7 +7,7 @@ Serial port;
 final int WIDTH = 128;
 final int HEIGHT = 64;
 byte[] bimg = new byte[WIDTH*HEIGHT/8];
-int threshold = 160;
+int threshold = 120;
 int interval = 16;
 void setup() {
   size(1280, 720);
@@ -28,7 +28,7 @@ void draw() {
       for (int j=0; j<HEIGHT; j++) {
         color pix = img.pixels[i+j*WIDTH];
         float red = red(pix), green = green(pix), blue = blue(pix);
-        float intensity = sqrt(red*red + blue*blue +green*green);
+        float intensity = (red*0.3f + blue*0.11f +green*0.59f);
         if (intensity > threshold) {
           bimg[i+j/8*WIDTH] = (byte)(bimg[i+j/8*WIDTH] | (1<<(j%8)));
         } else {
