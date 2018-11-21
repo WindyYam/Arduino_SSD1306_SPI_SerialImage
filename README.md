@@ -14,10 +14,10 @@ This Arduino sketch play the animation frames via serial. The processing code re
 In order to achieve a decent framerate the baud rate should be not less than 250000, in our setup it's 1000000
 
 Processing code requires gifAnimation lib(should be put into core/library)
-in the code threshold is between 0-255, value could be tune in order to get better visual affect.
+in the code threshold is between 0-255, value could be tune in order to get better visual effect.
 interval is the interval between every frame in microseconds
 
-New: add a screencap processing code
+New: add a screencap processing code which "miracast" your desktop onto your oled12864
 _____________________________________________________________________________
 
 SSD1306 OLED12864串口播放动画
@@ -38,4 +38,4 @@ Processing 代码需要使用 gifAnimation 库(必须放进Processing目录 core
 代码中，threshold是二值化的阈值，0-255，有些gif需要适当的阈值才能清晰显示二值化图像
 interval是图片播放间隔，单位是毫秒
 
-新增一个截屏流数据传输的Processing代码
+新增一个截屏流数据传输的Processing代码，将windows桌面投射入oled12864
